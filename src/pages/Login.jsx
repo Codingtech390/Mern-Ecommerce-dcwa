@@ -26,7 +26,8 @@ const Login = () => {
     e.preventDefault();
   };
 
-  console.log("login data", data);
+//   console.log("login data", data);
+
   return (
     <section id="login">
       <div className="mx-auto container p-6 ">
