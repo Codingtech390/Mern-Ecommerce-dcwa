@@ -36,7 +36,7 @@ const Login = () => {
             <img src={LoginIcon} alt="login-icon" />
           </div>
 
-          <form className="pt-6" onSubmit={handleFormSubmit}>
+          <form className="pt-6 flex flex-col gap-2" onSubmit={handleFormSubmit}>
             <div className="grid">
               <label className="text-indigo-500">Email: </label>
               <div className="bg-slate-100 p-2 rounded">
@@ -51,7 +51,7 @@ const Login = () => {
               </div>
             </div>
 
-            <div className="mt-2">
+            <div className="">
               <label className="text-indigo-500">Password: </label>
               <div className="bg-slate-100 p-2 rounded flex ">
                 <input
