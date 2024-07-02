@@ -22,7 +22,7 @@ const Header = () => {
             type="text"
             placeholder="Search products here..."
           />
-          <div className="flex items-center justify-center rounded-r-full text-lg text-white min-w-[50px] bg-indigo-600 h-8 cursor-pointer">
+          <div className="flex items-center justify-center rounded-r-full text-lg text-white min-w-[50px] bg-indigo-500 h-8 cursor-pointer hover:bg-indigo-600 transition-all duration-200 ease-in-out">
             <GrSearch />
           </div>
         </div>
@@ -43,7 +43,7 @@ const Header = () => {
           <div className="">
             <Link
               to={"/login"}
-              className="px-3 py-1 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+              className="px-4 py-1 bg-indigo-500 text-white rounded hover:bg-indigo-600 transition-all duration-200 ease-in-out"
             >
               Log in
             </Link>

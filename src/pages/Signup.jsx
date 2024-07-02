@@ -150,7 +150,7 @@ const Signup = () => {
               </div>
             </div>
 
-            <button className="bg-indigo-600 text-white px-6 py-2 w-full max-w-[150px] rounded hover:bg-indigo-700 transition-all mt-4 block mx-auto">
+            <button className="bg-indigo-600 text-white px-6 py-2 w-full max-w-[150px] rounded hover:bg-indigo-700 transition-all duration-200 ease-in-out mt-4 block mx-auto">
               Sign up
             </button>
           </form>
