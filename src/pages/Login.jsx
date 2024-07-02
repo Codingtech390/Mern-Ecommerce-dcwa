@@ -6,7 +6,27 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [data, setData] = useState({
+    email: "",
+    password: "",
+  });
 
+  const handleOnChange = (e) => {
+    const { name, value } = e.target;
+
+    setData((previousValue) => {
+      return {
+        ...previousValue,
+        [name]: value,
+      };
+    });
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  console.log("login data", data);
   return (
     <section id="login">
       <div className="mx-auto container p-6 ">
@@ -15,12 +35,15 @@ const Login = () => {
             <img src={LoginIcon} alt="login-icon" />
           </div>
 
-          <form className="pt-6">
+          <form className="pt-6" onSubmit={handleFormSubmit}>
             <div className="grid">
               <label className="text-indigo-500">Email: </label>
               <div className="bg-slate-100 p-2 rounded">
                 <input
                   type="email"
+                  name="email"
+                  value={data.email}
+                  onChange={handleOnChange}
                   placeholder="Enter your email"
                   className="w-full h-full outline-none bg-transparent"
                 />
@@ -32,6 +55,9 @@ const Login = () => {
               <div className="bg-slate-100 p-2 rounded flex ">
                 <input
                   type={showPassword ? "text" : "password"}
+                  name="password"
+                  value={data.password}
+                  onChange={handleOnChange}
                   placeholder="Enter your password"
                   className="w-full h-full outline-none bg-transparent"
                 />
@@ -56,7 +82,15 @@ const Login = () => {
               Log in
             </button>
           </form>
-          <p className="my-4 text-sm">Don't have an account? <Link to={"/sign-up"} className="text-indigo-600 hover:text-indigo-800 hover:underline">Sign up</Link></p>
+          <p className="my-4 text-sm">
+            Don't have an account?{" "}
+            <Link
+              to={"/sign-up"}
+              className="text-indigo-600 hover:text-indigo-800 hover:underline"
+            >
+              Sign up
+            </Link>
+          </p>
         </div>
       </div>
     </section>
